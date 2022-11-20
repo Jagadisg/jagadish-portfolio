@@ -1,0 +1,978 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: rgb(156, 97, 9);
+    
+} 
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+}
+body{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+header{
+    width: 100%;
+    position: fixed;
+    height: 6rem;
+    transition: 0.6s;
+    top:0;
+    left: 0;
+    z-index: 100000;
+}
+nav{
+    display: flex;
+    position: relative;
+    height: inherit;
+    width: 60%;
+    /* width: 100%; */
+    align-items: center;
+    justify-content: space-between;
+}
+header.sticky{
+    /* background-color: rgba(105, 234, 180, 0.582); */
+    background-color: #ced7dc;
+}
+h3{
+    display: inline-flex;
+    position: relative;
+}
+h3#spword{
+    padding: 0 80px;
+    font-size: 2.5rem;
+    /* line-height: 6rem; */
+    font-weight: bold ;
+}
+span#sl{
+    font-size: 4rem;
+    /* line-height: 6rem; */
+    font-weight: bolder;
+    color: rgb(187, 134, 55);
+}
+
+span#fl{
+    color: rgb(182, 135, 66);
+}
+
+ nav ul{
+    display: flex;
+    position: relative;
+    margin-left: 12rem;
+}  
+ nav ul li{
+    position: relative;
+    margin: 0px 15px;
+ 
+}
+nav ul li a{
+    position: relative;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+ .menu-btn{
+    font-size: 3rem;
+    color: white;
+    float: right;
+    line-height: 6rem; 
+    cursor: pointer;
+    display: none;
+} 
+#homemaindiv{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-color: rgba(105, 234, 180, 0.905);
+}
+#inner{
+    height: inherit;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    justify-content: center;
+    margin: auto 95px;
+}
+ #namewrap h1{
+    font-size: 4rem;
+    margin-bottom: 4rem;
+} 
+#contwrap{
+    display: inline-flex;
+    padding-left: 1rem;
+}
+
+#contwrap #edul{
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-right: 0.7rem;
+}
+
+.aboutmain{
+    width: 100%;
+    height: 119vh;
+    background-color: rgba(105, 234, 180, 0.905);
+}
+.title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+#aboutmain #ABOUTME{
+    font-size: 4rem;
+}
+.aboutmain #abome{
+    margin: auto;
+    width: 90%;
+    margin-bottom: 5rem;
+    font-size: 2rem;
+    font-weight: 400;
+}
+#about{
+    margin: auto;
+    width: 90%;
+    height: 40rem;
+    padding: 1.5rem;
+}
+#about li{
+    margin: 2rem;
+}
+#about li span{
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 1rem;
+}
+#about .fr{
+    float: left;
+    width: 40rem;
+}
+#about .fl{
+    float: right;
+    width: 45rem;
+}
+.qbutton{
+    font-size: 4rem;
+    font-weight: bold;
+}
+.qicon{
+    font-size: 4.23rem;
+    margin-right: 10px;
+}
+.qdata{
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 7.0rem;
+}
+.qtitle{
+    font-size: 4rem;
+    font-weight: bolder;
+}
+.qualcont1 .qdata .diplo{
+    font-size: 2rem;
+}
+.quacal{
+    font-size: 2rem;
+}
+.quaroun{
+    display: inline-block;
+    width: 1.5rem;
+    margin-bottom: 1rem;
+    height: 1.3rem;
+    background-color: blueviolet;
+    border-radius: 50%;
+}
+.qualine{
+    display: block;
+    width: 0.1rem;
+    height: 25vh;
+    background-color: rgb(92, 208, 127);
+    transform: translate(6px,-7px);
+}
+#qualcont{
+    width: 100%;
+    height: 121vh;
+    background-color: rgba(105, 234, 180, 0.905);
+}
+#qualcont #titlequa{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+.qcont .qbutton{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+#sch{
+    margin-top: 1rem;
+    margin-left: 17rem;
+    font-size: 2rem;
+}
+
+#wrap{
+    width: 100%;
+    height: 112vh;
+    background-color:  rgba(105, 234, 180, 0.905);
+}
+.skillbar {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.skillbar-bar::after {
+    background: rgb(138, 88, 2);
+    content: "";
+    height: 0.8rem;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.skillbar-bar {
+    margin-top: 0.5rem;
+    height: 0.8rem;
+    width: 0px;
+    background: #c75454;
+    transition-property: width, background-color;
+}
+
+.skillbar-title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.skill-bar-percent {
+    font-size: 2rem;
+    font-weight: 600;
+    float: right;
+    text-transform: uppercase;
+}
+
+/* CENTERING ONLY */
+
+.wrapper {
+    margin-top: 2rem;
+    width: 70vw;
+    margin: auto;
+}
+.wrap #title3{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+.wrap #title3 #skills{
+    font-size: 4rem;
+}
+
+.resumemain{
+    width: 100%;
+    height: 105vh;
+    background-color: rgba(105, 234, 180, 0.905);
+}
+.resumecontainer{
+    display: flex;
+    justify-content: center;
+}
+.resumecontainer #restitle{
+    margin-top: 10rem;
+    text-transform: uppercase;
+    
+}
+.resumecontainer #restitle #resume{
+    font-size: 4rem;
+}
+.downl{
+    width: 31.9rem;
+    margin: auto;
+    margin-top: 28vh;
+    height: 13.2rem;
+}
+.downl p{
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    margin-left: 1.1rem;
+}
+.downl a{    
+    font-size: 2rem;
+    background-color: #3498DB;
+    color: #9c6109;
+    margin-left: 8rem;
+    width: 13.3rem;
+    display: block;
+    padding: 0.9rem;
+    border-radius: 8%;
+}
+#contacttitle{
+    /* margin: 10px 0px; */
+    display: flex;
+    justify-content: center;
+}
+#contacttitle #contact{
+    font-size: 4rem;
+}
+.contactmain{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(105, 234, 180, 0.905);
+}
+
+.innercontact{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 9rem;
+    margin-left: -2rem;
+}
+.contactform textarea {
+        width: 100%;
+        height: 17rem;
+        padding: 1.2rem 2rem;
+        box-sizing: border-box;
+        border: 0.2rem solid #ccc;
+        border-radius: 0.4rem;
+        background-color: #ffff;
+        font-size: 1.6rem;
+        resize: none;
+}
+.condet .de{
+    margin-bottom: 7rem;
+    font-size: 2rem;
+}
+.condet .de span{
+    margin-left: 0.6rem;
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+.condet .de i{
+    background-color: aliceblue;
+    width: 2.9rem;
+    display: inline-block;
+    padding: 0.4rem;
+    height: 3.2rem;
+    border-radius: 1.1rem;
+}
+
+.contactform form #name,#email,#subject,#message{
+    margin-bottom: 2rem;
+    border:1px solid #ccc;
+    border-radius: 0.5rem;
+}
+
+.contactform form #name,#email{
+    width: 24rem;
+    height: 4rem;
+    padding: 0.6rem;
+    margin-right: 0.5rem;
+    padding: 20px 35px;
+}
+.contactform form #subject{
+    width: 49rem;
+    height: 4rem;
+    padding: 0.6rem;
+    margin-right: 0.5rem;
+}
+.contactform form #message{
+    padding: 0.6rem;
+}
+.contactform form #send{
+    display: flex;
+    background-color: #3498DB;
+    width: 10rem;
+    height: 3rem;
+    padding: 0.2rem;
+    margin-left: 40rem;
+    border:  1px solid blue;
+    justify-content: center;
+    border-radius: 0.4rem;
+
+}
+.contactform form #send:hover{
+    background-color: #0286de;
+    border: 1px solid wheat;
+}
+/* .name{
+    position: absolute;
+    top:50;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: -20px;
+    color: #bbb;
+} */
+.container{
+	max-width: 117rem;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+    /* height: ; */
+    width: 100%;
+	background-color: #ced7dc;
+    padding: 7rem 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 1.5rem;
+}
+.footer-col h4{
+	font-size: 1.8rem;
+	text-transform: capitalize;
+	margin-bottom: 3.5rem;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -1rem;
+	background-color: #e91e63;
+	height: 0.2rem;
+	box-sizing: border-box;
+	width: 5rem;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 1rem;
+}
+.footer-col ul li a{
+	font-size: 1.6rem;
+	text-transform: capitalize;
+	text-decoration: none;
+	font-weight: 500;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 0.8rem;
+}
+
+.footer-col .social-links a{
+	display: inline-block;
+	height: 4rem;
+	width: 4rem;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 1rem 1rem 0;
+	text-align: center;
+	line-height: 4rem;
+	border-radius: 50%;
+	color: #ffffff;
+    font-size: 1.9rem;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+.row .footab{
+    width: 50%;
+    line-height: 2.2em;
+    font-size: 1.6rem;
+}
+#about li .ab{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.inner #contwrap span{
+    color: rgb(94, 109, 112);
+    position: relative;
+}
+nav ul li::after{
+    content: "";
+    margin: auto;
+    width:0;
+    height: 3px;
+    display: block;
+    background-color: #9c6109;
+    /* transition-property: width; */
+    margin-top: 8px;
+    border-radius: 2px;
+    transition-duration: 0.2s;
+}
+nav ul li:hover:after{
+    /* margin-top: 4px; */
+    width: 100%;
+}
+nav ul li a:hover{
+    background-color: #fbc4a1b4;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+    #aboutmain #ABOUTME::after{
+        content: "";
+        height: 3px;
+        display: block;
+        background-color: #9c6109;
+        border-radius: 3px;
+    }
+    .qtitle::after{
+        content: "";
+        height: 3px;
+        display: block;
+        background-color: #9c6109;
+        border-radius: 3px;
+    }
+    .wrap #title3 #skills::after{
+        content: "";
+        height: 3px;
+        display: block;
+        background-color: #9c6109;
+        border-radius: 3px;
+    }
+.resumecontainer #restitle #resume::after{
+    content: "";
+    height: 3px;
+    display: block;
+    background-color: #9c6109;
+    border-radius: 3px;   
+    }
+#contacttitle #contact::after{
+    content: "";
+    height: 3px;
+    display: block;
+    background-color: #9c6109;
+    border-radius: 3px;   
+    }
+    .success{
+        font-size: 2rem;
+        color: green;
+        /* text-align: center; */
+        margin: auto;
+        position: absolute;
+        animation: buttons .3s linear;
+        margin-top: 1rem;
+        margin-left: 12rem;
+        display: none;
+    }
+    .danger{
+        font-size: 2rem;
+        color: red;
+        margin: auto;
+        position: absolute;
+        animation: buttons .3s linear;
+        margin-top: 1rem;
+        margin-left: 16rem;
+        display: none;
+    }
+    @keyframes buttons{
+        0%{
+            transform: scale(0.1);
+        }
+        50%{
+            transform: scale(0.5);
+        }
+        100%{
+            transform: scale(1);
+        }
+    } 
+/*responsive*/
+
+@media(max-width: 574px){
+    nav{
+        width: 100%;
+    }
+    nav ul{
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        background-color: rgba(105, 234, 180);;
+        height: 100vh;
+        width: 100vw;
+        display: block;
+        text-align: center;
+        margin-left: 0px;
+        transition: all 0.3s ease;
+    }
+    nav ul.active{
+        left: 0%;
+    }
+span#sl{
+        color: rgb(187, 134, 55);
+    } 
+    span#fl{
+        color: rgb(180, 132, 60);
+    }
+    .menu-btn{
+        display: block;
+        margin-right: 10px;
+    }
+    /* #click:checked ~ ul{
+        left: 0%;
+    } */
+    .menu-btn i.active:before{
+        content: "\2716";
+    }
+    nav ul li a:hover,nav ul li a:active{
+        background: none;
+        color: #0b5176;
+    }
+    nav ul li{
+        margin: 15px 0px;
+    }
+    nav ul li a:hover{
+        background-color: transparent;
+    }
+    #inner{
+        width: fit-content;
+        margin: auto;
+    }
+    #iname,#iemail{
+        display: none;
+    }
+
+    #namewrap h1{
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+    #contwrap #edul{
+        font-size: 2.5rem;
+        margin-right: 0.7rem;
+    }
+    .footer-col{
+        width: 100%;
+    } 
+    .innercontact {
+        display: block;
+    }
+    .innercontact .condet{
+        width: 100%;
+        /* justify-content: center; */
+        text-align: center; 
+    }
+    .innercontact .condet .de{
+        margin-left: 0;
+
+    }
+    .innercontact .condet .ac{
+        margin-left: 5px;
+        width: 96%;
+    }
+    .contactmain {
+        width: 100vw;
+        height: 150vh;
+        background-color: rgba(105, 234, 180, 0.905);
+    }
+    .contactform form{
+        width: 106%;
+        text-align: center;
+    }
+
+    .contactform form #name,#email,#subject,#message{
+        margin-bottom: 1rem;
+        border:1px solid #ccc;
+        border-radius: 0.4rem;
+    }
+    .contactform form #name,#email{
+        width: 14.7rem;
+        height: 3.4rem;
+        padding: 1.3rem;
+        margin-right: 0.3rem;
+    }
+    .contactform form #subject{
+        width: 30rem;
+        height: 4rem;
+        padding: 1.3rem;
+        margin-right: 0.2rem;
+    }
+    .contactform form #message{
+        padding: 1.3rem;
+        width:30rem
+    }
+    .contactform form #send{
+        background-color: #3498DB;
+        width: 10rem;
+        height: 4rem;
+        padding: 0.3rem;
+        /* margin-left: 5rem; */
+        margin: auto;
+        border-radius: 0.5rem;
+    
+    }
+    .contactform textarea {
+        width: 30rem;
+        height: 17rem;
+        padding: 1.2rem 2rem;
+        box-sizing: border-box;
+        border: 0.2rem solid #ccc;
+        border-radius: 0.4rem;
+        background-color: #ffff;
+        font-size: 1.6rem;
+        resize: none;
+}
+.qualcont{
+    width: 100%;
+}
+#qualcont .qcont .qtab{
+    text-align: center;
+}
+.qtitle{
+    font-size: 3.6rem;
+    font-weight: bolder;
+}
+.qbutton{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.qicon{
+    font-size: 3.23rem;
+    margin-right: 10px;
+}
+.qdata{
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 0rem;
+}
+#contacttitle #contact{
+    font-size: 4rem;
+}
+.resumecontainer #restitle #resume{
+    font-size: 4rem;
+}
+.wrap #title3 #skills{
+    font-size: 4rem;
+}
+#aboutmain #ABOUTME{
+    font-size: 3.8rem;
+}
+#sch{
+    margin-top: 0rem;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}
+.quaroun{
+    display: inline-block;
+    width: 1.5rem;
+    margin-bottom: 1rem;
+    height: 1.3rem;
+    background-color: blueviolet;
+    border-radius: 50%;
+}
+.qualcont1 .qdata .diplo{
+    font-size: 1.5rem;
+}
+.aboutmain {
+    height: 138vh;
+}
+#about{
+    margin: auto;
+    width: 90%;
+    height: 56%;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 1rem;
+}
+#about li{
+    margin: 2rem;
+}
+#about li span{
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 0.5rem;
+    text-align: center;
+}
+#about li .ab{
+    font-size: 2rem;
+    font-weight: bold;
+}
+#about .fr{
+    float: none;
+    width:fit-content;
+}
+#about .fl{
+    float: none;
+    width: fit-content;
+}
+nav ul {
+    display: none;
+  }
+  h3#spword {
+    padding: 0px 40px;
+    font-size: 2.5rem;
+    line-height: 6rem;
+    font-weight: bold;
+  }
+  .menu-btn{
+    display: block;
+}
+
+nav ul li a:hover,nav ul li a:active{
+    background: none;
+    color: #075b88;
+}
+}
+@media(max-width: 768px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    span#sl{
+        color: rgb(187, 134, 55);
+    } 
+    span#fl{
+        color: rgb(180, 132, 60);
+    }
+    #qualcont {
+        height: 132vh;
+    }
+    .aboutmain {
+        height: 140vh;
+    }
+    #about{
+        /* border: 2px solid red; */
+        margin: auto;
+        width: 90%;
+        height: 56%;
+        display: flex;
+        flex-flow: row wrap;
+        padding: 1rem;
+    }
+    #about .fr{
+        float: none;
+        width:fit-content;
+    }
+    #about .fl{
+        float: none;
+        width: fit-content;
+    }
+    #about li .ab{
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    /* #about li .cd{
+        margin-left: 6.5rem;
+    } */
+    nav{
+        width: 100%;
+    }
+    nav ul{
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        background-color: rgba(105, 234, 180);;
+        height: 100vh;
+        width: 100vw;
+        display: block;
+        text-align: center;
+        margin-left: 0px;
+        transition: all 0.3s ease;
+    }
+    nav ul.active{
+        left: 0%;
+    }
+    .menu-btn{
+        display: block;
+        margin-right: 10px;
+    }
+    #iname,#iemail{
+        display: none;
+    }
+    /* #click:checked ~ ul{
+        left: 0%;
+    } */
+    .menu-btn i.active::before{
+        content: "\2716";
+    }
+    nav ul li a:hover,nav ul li a:active{
+        background: none;
+        color: #044263;
+    }
+    nav ul li{
+        margin: 15px 0px;
+    }
+    nav ul li a:hover{
+        background-color: transparent;
+    }
+    #inner{
+        width: fit-content;
+        margin: auto;
+    }
+    #namewrap h1{
+        font-size: 4rem;
+        margin-bottom: 3rem;
+    }
+    #contwrap #edul{
+        font-size: 3rem;
+        margin-right: 0.9rem;
+    }
+    .contactform form #name, #email {
+        width: 15rem;
+    }
+    .contactform form #name, #email, #subject, #message {
+        margin-bottom: 1.5rem;
+    }
+    .contactform form #subject {
+        width: 31rem;
+    }
+    .contactform textarea {
+        width: 98%;
+    }
+    .contactform form #send {
+        margin-left: 10.5rem;
+    }
+    .contactform{
+        margin-right: 2rem;
+    }
+    .condet .de {
+        font-size: 1.8rem;
+        margin-left: 4.5rem;
+    } 
+}
+
+@media(max-width: 400px){
+    html{
+        font-size: 9.5px;
+    }
+    .condet .de {
+        font-size: 1.8rem;
+        margin-left: 0rem;
+      }
+      #iname,#iemail{
+        display: none;
+    }
+}
+@media(max-width:320px){
+    html{
+        font-size:8.5px
+    }
+    .contactform form #send{
+        width: 15rem;
+    }
+    .condet .de {
+        font-size: 1.8rem;
+        margin-left: 0rem;
+      }
+      #iname,#iemail{
+        display: none;
+    }
+}   
+@media(max-width:600){
+    html{
+        font-size: 11px;
+    }
+    .condet .de {
+        font-size: 1.8rem;
+        margin-left: 0rem;
+      }
+      #iname,#iemail{
+        display: none;
+    }
+} 
