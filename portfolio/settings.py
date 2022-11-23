@@ -32,7 +32,7 @@ ALLOWED_HOSTS = ['127.0.0.1','jagadishportfolio.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
-    'db',
+    'db.DbConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
