@@ -26,7 +26,6 @@ SECRET_KEY = 'django-insecure-n6c2o@qu+huq67!pdh9jg6xq26dh6k9v78y5x)t4-xyn22e&s!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-# ALLOWED_HOSTS = ['127.0.0.1','jagadishportfolio.herokuapp.com']
 ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
 
 
@@ -120,15 +119,19 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-if DEBUG:
-   STATICFILES_DIRS = [
-   os.path.join(BASE_DIR, 'static'),
-#    os.path.join(BASE_DIR, 'staticfiles_build', 'static')
-   ]
-else:
-   STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+STATICFILES_DIRS = os.path.join(BASE_DIR,'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+
+# if DEBUG:
+#    STATICFILES_DIRS = [
+#    os.path.join(BASE_DIR, 'static'),
+# #    os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+#    ]
+# else:
+#    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
